@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<script type="text/javascript" src="Libraries/jquery.min.js"></script>
+	
+	<style>
+
+		.material-icons { vertical-align: -14% }
+
+	</style>
+
+	<title> Login </title>
+
+</head>
+
+<body style="font-family:'Segoe UI'; font-size: 14px;">
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+    
+			$("#validate").click(function() {
+
+    			var user_type = $("#usertype").val();
+    			
+    			if (user_type == "user") {
+
+    				window.location.href = "index.html";
+
+    			}
+
+    			else if (user_type == "hod" || user_type == "supervisor") {
+
+    				window.location.href = "head_of_unit.html";
+
+    			}
+
+    			else {
+
+    				// window.location.href = 'index.html';
+
+    			}
+
+    		});
+
+		});
+    		
+	</script>
+
+	<div align="center" class="w3-container w3-blue" style="margin-bottom: 1px;">
+
+    	<h5> <b> 🚋 Travel Manager: </b> Login </h5>
+
+	</div>
+
+	<div class="w3-bar w3-blue">
+
+		<form class="w3-container"> <br>
+
+			<input class="w3-input" type="text" id="usertype" placeholder="enter your system user type: user, hod...">
+			<input class="w3-input" type="name" placeholder="enter your system registration name...">
+			<input class="w3-input" type="password" placeholder="enter your secret password, e.g 1234..." style="margin-bottom: 19px;">
+
+			<b> <button class="w3-bar-item w3-button w3-ripple w3-khaki" id="validate"> <a href="index.html" style="text-decoration: none;">  ✓ login account </a> </button> </b>
+  			<a href="register_user.html"> <button class="w3-bar-item w3-button w3-ripple w3-grey"> ☀ register account </button> </a>
+
+		</form>
+
+	</div> <div class="w3-bar w3-blue" style="text-align: center; padding-bottom: 7px; padding-top: 7px; font-style: italic; font-size: 8px;"> "A United Nations - Affiliated Internship Project" </div>
+
+</body>
+
+</html>
